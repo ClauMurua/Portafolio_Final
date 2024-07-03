@@ -1,0 +1,223 @@
+{% load static%}
+{% load bootstrap5%}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    {%bootstrap_css%}
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="/portfolioproject/myportfolio/static/css/style.css">
+    <title>Mi Portafolio</title>
+</head>
+
+<body>
+    
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <h1>/MI PORTAFOLIO/</h1>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>                            
+                            <li><a href="#projects" onclick="seleccionar(this)">PORTFOLIO</a></li>
+                            <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
+                        </ul>
+                    </nav>
+
+                    
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+
+                    <div class="redes">
+                        <a href="https://www.linkedin.com/in/claudio-mur%C3%BAa-andrade-8a8b5ba0/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/ClaUmUrUaa/" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/claumuruaa/?igsh=a2M5YTc0Zm1scnp2&utm_source=qr" target="_blank">
+                            <i class="fa-brands fa-instagram-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida">Bienvenidos</p>
+                <h2>Soy <span>Claudio Murúa</span>, Estudiante de Ingeniería en Informática.</h2>
+                <!-- <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, </p> -->
+                <a href="#projects">Ir a Portafolio</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="{% static './img/foto.png' %}" alt="">
+        </div>
+        <div class="sobremi">
+            <p class="titulo-seccion">Sobre Mi</p>
+            <h2>Hola, Soy <span>Claudio Murúa</span> </h2>
+            <h3>Estudiante de Ingeniería en Informática</h3>
+            <p>Estudiante de Ingeniería en informática en DuocUC sede Puerto Montt, actualmente cursando el tercer semestre.
+                actualmente trabajo para CLARO-VTR CHILE como analista de datos.</p>
+            <a href="#">Descargar CV</a>
+        </div>
+    </section>    
+
+    <div class="contenedor-skills" id="skills">
+        <h3>HABILIDADES </h3>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Html & Css</p>
+                <span class="porcentaje">60%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="html"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Javascript</p>
+                <span class="porcentaje">35%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="js"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Bases de Datos</p>
+                <span class="porcentaje">10%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="bd"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Python</p>
+                <span class="porcentaje">70%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="ps"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <section id="portfolio">
+        <h3 class="titulo-seccion">Mis Proyectos</h3>
+        <div class="fila">
+            <div class="proyecto">
+                <div class="overlay">
+                
+                </div>
+                
+                <a target="_blank" href="./indexDino.html"><img src="{% static './img/proyecto1.jpg'%}" alt="" ></a>
+                <div class="info">
+                    <h4>Dinosaurio</h4>
+                    <p>VideoJuego</p>
+                    </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <a target="_blank" href="./indexMecanico.html"><img src="{% static './img/proyecto2.jpg'%}" alt=""></a>
+                <div class="info">
+                    <h4>Tallet mecánico Rayo Makween</h4>
+                    <p>Diseño Web</p>
+                </div> -->
+            <!-- </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto3.jpg" alt="">
+                <div class="info">
+                    <h4>Descripcion Proyecto</h4>
+                    <p>Diseño Web</p>
+                </div>
+            </div> -->
+        
+    <!-- </section> -->
+
+    <!-- PROJECTS SECTION -->
+<section id="projects" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Mis Proyectos</h2>
+        <div class="row">
+            {% for proyecto in proyectos %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ proyecto.imagen.url }}" class="card-img-top" alt="{{ proyecto.titulo }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ proyecto.titulo }}</h5>
+                        <p class="card-text">{{ proyecto.descripcion }}</p>
+                        <a href="{{ proyecto.link_sitio }}" class="btn btn-primary" target="_blank">Pagina Web</a>
+                        <a href="{{ proyecto.link_repositorio }}" class="btn btn-secondary" target="_blank">Repositorio GIT</a>
+                        <!-- <a href="{% url 'proyecto_detalle' proyecto.pk %}" class="btn btn-info">Ver Detalle</a> -->
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+
+
+        <section id="contacto">
+        <h3 class="titulo-seccion">Contactame </h3>
+        <div class="contenedor-form">
+            <form method="POST" action="{% url 'contacto_nuevo' %}" class="need-validation" novalidate>
+                {% csrf_token %}
+                <div class="fila mitad">
+                    <input for="validationserver02" type="text" name="Nombre" placeholder="Nombre Completo *" class="input-mitad">
+                    <input type="email" name="Email" placeholder="Dirección de Email" class="input-mitad">
+                </div>
+                <div class="fila">
+                    <input type="text" name="Tema" placeholder="Tema..." class="input-full">
+                </div>
+                <div class="fila">
+                    <textarea type="text" name="Mensaje" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
+                </div>
+
+                <input type="submit" value="Enviar Mensaje" class="btn btn-enviar">
+            </form>
+        </div>
+    </section>
+    {% bootstrap_javascript %}
+    <script src="{% static './js/script.js' %}"></script>
+    
+    <footer>
+        <p>Todos los derechos reservados - 2024</p>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/claudio-mur%C3%BAa-andrade-8a8b5ba0/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/ClaUmUrUaa/" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/claumuruaa/?igsh=a2M5YTc0Zm1scnp2&utm_source=qr" target="_blank">
+                <i class="fa-brands fa-instagram-square"></i>
+            </a>
+        </div>
+
+    </footer>
+    {%bootstrap_javascript %}
+    <script src="{%static 'js/script.js'%}"></script>
+</body>
+
+</html>
